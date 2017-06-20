@@ -1,0 +1,63 @@
+/* Pesmica modifikovana css-om zamisljena tako da :
+	- kada se predje misem izmedju naslova i slike kuce izadju reci pesme
+	- kada se predje preko kucice pojavljuje se "Zmaj" koji "oduva" hiperlinkovu kucicu na stranu o Jovanu Jovanovicu Zmaju
+
+*/
+
+/* postavio granice u kojima ce se sadrzaj videti*/
+body{
+	background-color: #DEB887;
+	width: 800px;
+	height: 650px;
+	margin: 10px 400px 10px 400px;
+}
+
+/* modifikovan div kako bi uokvirio reci pesme*/
+#sadrzaj{
+	color: transparent;
+    background-color: #876648;
+    width: 350px;
+    height: 600px;
+    outline: 5px solid #876648;
+    border: 15px solid #876648;
+    outline-offset: 5px;
+    margin: 10px 20px 10px 20px ;
+    padding: 10px 10px 10px 20px;
+    font-family: 'Indie flower', cursive;
+    font-size: 25px;
+    float: left;
+ }
+
+/*modifikovan tekst pesme*/
+.tekst{
+	font-size: 20px !important;
+	text-align: center;
+	font-style: italic;
+}
+
+/*tekst pesme se pojavljuje prelaskom misem izmedju naslova i slike kuce */
+h1{
+	color: #ffffff;
+	text-shadow: #9B7754;
+}
+
+p:hover{
+	color: #ffffff;
+	transition-duration: 1s;
+}
+/*prelakom preko hiperlinkovane slike kucice, pojavljuje se druga slika ( zmaj ) koji postaje zajedno sa njom hiperlink ka wikipedia stranici Jovana Jovanovica Zmaja*/
+.slikahover a:hover:after {
+	position: relative;
+}
+
+
+.slikahover a span {
+	content: url(images/kucinakuca.png);
+	position:absolute;
+  	display:none;
+   	z-index:99;
+}
+
+.slikahover a:hover span {
+	display:inline-block;
+}
