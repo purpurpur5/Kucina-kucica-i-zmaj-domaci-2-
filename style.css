@@ -3,29 +3,27 @@
 	- kada se predje preko kucice pojavljuje se "Zmaj" koji "oduva" hiperlinkovu kucicu na stranu o Jovanu Jovanovicu Zmaju
 
 */
-
-/* postavio granice u kojima ce se sadrzaj videti*/
 body{
-	background-color: #DEB887;
-	width: 800px;
-	height: 650px;
-	margin: 10px 400px 10px 400px;
+	font-family: 'Indie flower', cursive;
+	margin: 50px 400px 50px 400px;
 }
+#strana{
+	width:400px;
+	height: 650px;
 
-/* modifikovan div kako bi uokvirio reci pesme*/
+}
+/* modifikovan section kako bi uokvirio reci pesme*/
 #sadrzaj{
 	color: transparent;
     background-color: #876648;
     width: 350px;
-    height: 600px;
-    outline: 5px solid #876648;
+    height: 520px;
     border: 15px solid #876648;
+    outline: 5px solid #876648;
     outline-offset: 5px;
     margin: 10px 20px 10px 20px ;
     padding: 10px 10px 10px 20px;
-    font-family: 'Indie flower', cursive;
     font-size: 25px;
-    float: left;
  }
 
 /*modifikovan tekst pesme*/
@@ -45,19 +43,13 @@ p:hover{
 	color: #ffffff;
 	transition-duration: 1s;
 }
-/*prelakom preko hiperlinkovane slike kucice, pojavljuje se druga slika ( zmaj ) koji postaje zajedno sa njom hiperlink ka wikipedia stranici Jovana Jovanovica Zmaja*/
-.slikahover a:hover:after {
-	position: relative;
+
+/* pojavljivanje slike zmaja kada se misom predje preko slike kuce*/
+#zmaj{
+	opacity: 0;
+	float: right;
 }
 
-
-.slikahover a span {
-	content: url(images/kucinakuca.png);
-	position:absolute;
-  	display:none;
-   	z-index:99;
-}
-
-.slikahover a:hover span {
-	display:inline-block;
+.slikahover #kuca:hover + #zmaj{
+	opacity: 1;
 }
